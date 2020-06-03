@@ -1,0 +1,11 @@
+---
+virtualbox_packages:
+  - "kernel-devel" 
+  - "kernel-headers" 
+  - "make" 
+  - "patch" 
+  - "gcc"
+
+virtualbox_download_repo: "https://download.virtualbox.org/virtualbox/rpm/el/virtualbox.repo" 
+virtualbox_repo_dest: "/etc/yum.repos.d"
+virtualbox_version: 5.2

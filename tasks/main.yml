@@ -1,0 +1,6 @@
+---
+- name: Install virtualbox
+  include_tasks: install.yml
+
+- name: Start virtualbox systemd
+  include_tasks: start.yml

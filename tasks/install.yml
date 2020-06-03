@@ -1,0 +1,16 @@
+---
+- name: Download yum dependencies 
+  yum: 
+    name: "{{ virtualbox_packages }}"
+    state: present
+
+- name: Download virtualbox repo
+  get_url:
+    url: "{{ virtualbox_download_repo }}"
+    dest: "{{ virtualbox_repo_dest }}"
+    validate_certs: no
+    
+- name: Install virtualbox
+  yum:
+    name: "VirtualBox-{{ virtualbox_version }}" 
+    state: installed

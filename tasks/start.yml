@@ -1,0 +1,6 @@
+---
+- name: Ensure systemd is running
+  systemd:
+    name: vboxdrv
+    enabled: yes
+    state: started
